@@ -1,0 +1,122 @@
+# IMPLEMENTATION
+# Smart Emergency Network Traffic Management System
+
+## 1. Project Overview
+
+The Smart Emergency Network Traffic Management System is a computer network designed to provide reliable and prioritized communication during normal and emergency situations.
+
+The system represents different departments such as hospitals, police, fire/disaster management, government departments, and normal users. Multiple routers and switches are interconnected to provide communication between these departments.
+
+The main objective of the implementation is to ensure that emergency communication can continue even when congestion or a network link failure occurs.
+
+The network uses IP addressing, VLSM-based subnetting, OSPF dynamic routing, VLAN-based network segmentation, traffic-priority concepts, and alternate routing paths.
+
+The implementation is designed and tested using Cisco Packet Tracer.
+
+---
+
+## 2. Objectives
+
+The main objectives of the implementation are:
+
+1. To design a multi-router emergency communication network.
+2. To divide the network into different departments using subnetting.
+3. To implement IP addressing using VLSM.
+4. To configure dynamic routing using OSPF.
+5. To provide two alternative paths between critical network nodes.
+6. To classify network traffic according to priority.
+7. To give emergency traffic higher priority than normal traffic.
+8. To simulate normal, emergency, and congested traffic conditions.
+9. To simulate router/link failure.
+10. To demonstrate automatic traffic redirection through an alternate path.
+11. To analyse TCP and UDP traffic requirements.
+12. To evaluate throughput, delay, packet loss, jitter, bandwidth utilization, and recovery time.
+13. To improve network reliability and availability for emergency communication.
+
+---
+
+## 3. Tools and Technologies Used
+
+### Software
+
+- Cisco Packet Tracer
+- Visual Studio Code
+- Git
+- GitHub
+
+### Networking Technologies
+
+- IPv4
+- VLSM Subnetting
+- OSPF
+- VLAN
+- Inter-VLAN Routing
+- Router-on-a-Stick
+- TCP
+- UDP
+- QoS and Traffic Prioritization
+- Redundant Routing
+- Network Failure Recovery
+
+---
+
+## 4. Network Components
+
+The implemented network contains the following devices:
+
+| Device | Quantity |
+|---|---:|
+| Cisco 2911 Routers | 4 |
+| Cisco 2960-24TT Switches | 5 |
+| PCs | 15 |
+| Servers | 2 |
+| Total Devices | 26 |
+
+### Routers
+
+- R1
+- R2
+- R3
+- R4
+
+### Switches
+
+- SW1
+- SW2
+- SW3
+- SW4
+- SW5
+
+### End Devices
+
+- Hospital: 3 PCs
+- Police: 3 PCs
+- Fire/Disaster: 3 PCs
+- Government: 3 PCs
+- Normal Users: 3 PCs
+
+### Servers
+
+- Emergency Server
+- Government Server
+
+---
+
+# 5. Network Topology
+
+The network is divided into multiple departmental networks.
+
+The basic router topology is:
+
+```text
+                 R1
+                /  \
+               /    \
+             R2      R3
+              \      /
+               \    /
+                 R4
+                 |
+                SW4
+                 |
+                SW5
